@@ -2,6 +2,9 @@ import { useState } from "react";
 
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 
+import { loginUser } from "../actions";
+import { connect } from "react-redux";
+
 const Login = () => {
   const [formState, setFormState] = useState({
     email: "",
@@ -19,6 +22,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formState);
+    loginUser(formState.email);
   };
 
   return (
@@ -48,4 +52,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => {
+  return { user: state.user };
+};
+export default connect(mapStateToProps, { loginUser })(Login);
