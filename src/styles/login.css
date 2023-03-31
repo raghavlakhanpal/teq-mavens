@@ -1,0 +1,31 @@
+button {
+  width: 6em;
+}
+.button-submit{
+    display: flex;
+    justify-content: flex-end;
+}
+.flex {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.form-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 60%;
+}
